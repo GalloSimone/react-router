@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-export default function Layout(){
+export default function layout(){
+    return(
     <>
     <header>Navlink</header>
 
@@ -11,5 +12,7 @@ export default function Layout(){
     <footer>
         footer
     </footer>
+
     </>
+    )
 }
