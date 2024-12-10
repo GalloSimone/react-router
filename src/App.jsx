@@ -8,7 +8,7 @@ function App() {
     <Routes>
      <Route index Component={HomePage} />
      <Route path="/about" Component={AboutPage} />
-     <Route path="/post" Component={PostPage} />
+     <Route path="/Post" Component={PostPage} />
     </Routes>
     </BrowserRouter>
   );
