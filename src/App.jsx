@@ -4,8 +4,9 @@ import Layout from "./layout/LayoutDefault";
 
 
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage"
-import PostPage from "./pages/PostListPage"
+import AboutPage from "./pages/AboutPage";
+import IndexPosts from "./pages/posts/IndexPosts.jsx";
+
 function App() {
   return(
     <BrowserRouter>
@@ -13,7 +14,7 @@ function App() {
     <Route Component={Layout}>
      <Route index Component={HomePage} />
      <Route path="/about" Component={AboutPage} />
-     <Route path="/Post" Component={PostPage} />
+     <Route path="/Post" Component={IndexPosts} />
      </Route>
     </Routes>
     </BrowserRouter>
