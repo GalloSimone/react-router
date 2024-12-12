@@ -21,30 +21,33 @@ export default function PostsPage() {
           <table className="table table-hover">
             <thead className=''>
               <tr className="table-light">
+                <th scope="col">Immagine</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Descrizione</th>
-                <th scope="col">Tags</th>
                 <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               {posts.map((post) => (
                 <tr key={post.id}>
+
+
                   <th>
-                    <p>{post.titolo}</p>
+                  <img src="https://via.placeholder.com/150" alt={post.titolo} />
                   </th>
                   <td>
-                     <p >{post.description}</p>
+                      <p className='h3'>{post.titolo}</p>
                   </td>
-                  <td>{post.tags.map((tags, index) => (
-                      <span key={index} className="">
-                        {tags}
-                     
-                      </span>
-                   )) }
+                  <td>
+                  <Link
+                    to={`/posts/:id`}
+                    type="button"
+                    className="btn btn-primary m-1 mt-0"   >
                     
+                     
+                        MOSTRA POST
+                        </Link>              
+
                   </td>
-                  <td></td>
                 </tr>
               ))}
             </tbody>
