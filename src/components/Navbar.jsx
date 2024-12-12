@@ -16,7 +16,7 @@ export default function Navbar(){
           <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/Post">Post</NavLink>
+          <NavLink className="nav-link" to="/Posts">lista post</NavLink>
         </li>
       </ul>
     </div>

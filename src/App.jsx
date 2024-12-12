@@ -5,8 +5,8 @@ import Layout from "./layout/LayoutDefault";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import IndexPosts from "./pages/posts/IndexPosts.jsx";
-
+import ShowPosts from './pages/posts/ShowPosts';
+import IndexPosts from './pages/posts/IndexPosts';
 function App() {
   return(
     <BrowserRouter>
@@ -14,7 +14,8 @@ function App() {
     <Route Component={Layout}>
      <Route index Component={HomePage} />
      <Route path="/about" Component={AboutPage} />
-     <Route path="/Post" Component={IndexPosts} />
+     <Route path="/posts" Component={IndexPosts } />
+        <Route path="/posts/:id" Component={ShowPosts} />
      </Route>
     </Routes>
     </BrowserRouter>
