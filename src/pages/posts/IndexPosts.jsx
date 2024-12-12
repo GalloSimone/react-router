@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 
 export default function PostsPage() {
   const [posts, setPosts] = useState([]);
@@ -19,9 +21,9 @@ export default function PostsPage() {
           <table className="table table-hover">
             <thead className=''>
               <tr className="table-light">
-                <th scope="col">Immagine</th>
                 <th scope="col">Nome</th>
-                <th scope="col">Ingredienti</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Tags</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -32,14 +34,15 @@ export default function PostsPage() {
                     <p>{post.titolo}</p>
                   </th>
                   <td>
-                    <p >{post.description}</p>
+                     <p >{post.description}</p>
                   </td>
-                  <td>
-                    {post.tags.map((tags, index) => (
-                      <span key={index} className="badge text-bg-secondary ms-2">
+                  <td>{post.tags.map((tags, index) => (
+                      <span key={index} className="">
                         {tags}
+                     
                       </span>
-                    ))}
+                   )) }
+                    
                   </td>
                   <td></td>
                 </tr>
